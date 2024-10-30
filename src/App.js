@@ -21,7 +21,9 @@ import Footer from './components/section/Footer';
 const App = () => {
   return(
     <BrowserRouter>
-      <Routes>
+    <Header />
+    <Main>
+    <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/today' element={<Today/>}/>
         <Route path='/developer' element={<Developer/>}/>
@@ -35,6 +37,8 @@ const App = () => {
         <Route path='/search/:searchId' element={<Search/>}/>
         <Route path='*' element={<Not/>}/>
       </Routes>
+    </Main>
+    <Footer />
     </BrowserRouter>
   )
 }
